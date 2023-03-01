@@ -1,0 +1,24 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Switch {
+  name: String!
+  state: Boolean!
+}
+
+type HeaterModel {
+  name: String!
+  state: Boolean!
+}
+
+type Query {
+  bulbs: [HeaterModel!]!
+}
+
+type Mutation {
+  setLight(name: String!, state: Boolean!): Switch!
+  setAllLight(state: Boolean!): [Switch!]!
+  setHeat(name: String!, state: Boolean!): HeaterModel!
+  setAllHeat(state: Boolean!): [HeaterModel!]!
+}
